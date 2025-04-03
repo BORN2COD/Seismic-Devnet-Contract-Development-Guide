@@ -9,6 +9,7 @@ Note; Seismic has already clarified that this testnet action is not incentivized
 **Important Links:**
 
 Network Name: Seismic Devnet
+
 Currency Symbol: ETH
 
 Chain ID: 5124
