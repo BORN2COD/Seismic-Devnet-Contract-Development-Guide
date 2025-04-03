@@ -6,13 +6,6 @@ Note; Seismic has already clarified that this testnet action is not incentivized
 
 ---
 
-# Seismic Devnet Contract Deploy Guide
-
-▶ **Overview**
-This guide provides a step-by-step process for deploying and interacting with an encrypted contract on Seismic Devnet. Follow each step carefully to ensure a smooth setup.
-
----
-
 ◆ **Pre-Requirements**
 Before deploying the contract, install the necessary tools:
 
