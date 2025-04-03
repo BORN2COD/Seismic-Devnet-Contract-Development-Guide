@@ -1,7 +1,5 @@
 # Seismic Devnet Contract Deployment Guide
 
-▶ **Overview**
-
 This guide shows you how to deploy and work with an encrypted contract on Seismic Devnet. Follow each step closely for a smooth setup.
 
 Note; Seismic has already clarified that this testnet action is not incentivized.
@@ -11,15 +9,10 @@ Note; Seismic has already clarified that this testnet action is not incentivized
 Network Name: Seismic Devnet
 
 Currency Symbol: ETH
-
 Chain ID: 5124
-
 RPC URL (HTTP): https://node-2.seismicdev.net/rpc
-
 RPC URL (WS): wss://node-2.seismicdev.net/ws
-
 Explorer: https://explorer-2.seismicdev.net
-
 Faucet: https://faucet-2.seismicdev.net
 
 ---
