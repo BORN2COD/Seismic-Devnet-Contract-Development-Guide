@@ -1,4 +1,4 @@
-# Seismic Devnet Contract Deployment Guide
+# Seismic Devnet Contract Deployment Guide 🪢
 
 This guide shows you how to deploy and work with an encrypted contract on Seismic Devnet. Follow each step closely for a smooth setup.
 
