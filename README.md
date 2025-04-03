@@ -6,134 +6,142 @@ This guide shows you how to deploy and work with an encrypted contract on Seismi
 
 Note; Seismic has already clarified that this testnet action is not incentivized.
 
-+----------------------+---------------------------------------------+
-| Item                | Value                                       |
-+----------------------+---------------------------------------------+
-| Network Name        | Seismic Devnet                              |
-| Currency Symbol     | ETH                                         |
-| Chain ID           | 5124                                        |
-| RPC URL (HTTP)     | https://node-2.seismicdev.net/rpc           |
-| RPC URL (WS)       | wss://node-2.seismicdev.net/ws              |
-| Explorer           | https://explorer-2.seismicdev.net/           |
-| Faucet             | https://faucet-2.seismicdev.net/             |
-| Starter Repo       | https://github.com/SeismicSystems/seismic-starter |
-+----------------------+---------------------------------------------+
+**Important Links:**
+
+Network Name: Seismic Devnet
+Currency Symbol: ETH
+Chain ID: 5124
+RPC URL (HTTP): https://node-2.seismicdev.net/rpc
+RPC URL (WS): wss://node-2.seismicdev.net/ws
+Explorer: https://explorer-2.seismicdev.net
+Faucet: https://faucet-2.seismicdev.net
 
 ---
 
-◆ **Pre-Requirements**
-Make sure you have the following installed before you start:
+**◆ Pre-Requirements**
+Before deploying the contract, install the necessary tools:
 
-➤ **1. Install Rust**
-Run this command to install Rust:
-```sh
+➤ 1. Install Rust
+
+Run the following command to install Rust:
+
 curl https://sh.rustup.rs -sSf | sh
+
+After installation, apply the changes:
+
 . "$HOME/.cargo/env"
-```
-✔ **Next Steps:**
-• Verify the installation by running:
-```sh
+
+Verify if Rust is installed correctly:
+
 rustc --version
-```
-• If you see a version number, Rust is installed correctly.
-• If not, restart your terminal and try again.
 
-➤ **2. Install jq**
-• For WSL/Ubuntu:
-```sh
+✔ If a version number appears, Rust is installed successfully.
+
+➤ 2. Install jq
+
+For WSL/Ubuntu, run:
+
 sudo apt install jq
-```
-• For Mac:
-```sh
+
+For Mac, run:
+
 brew install jq
-```
-✔ **Next Steps:**
-• Check the installation by running `jq --version`.
-• If it fails, try running `sudo apt update && sudo apt install jq` on Ubuntu.
 
-➤ **3. Install sfoundryup**
-Run this command to install sfoundryup:
-```sh
+✔ After installation, jq will be available for processing JSON data.
+
+➤ 3. Install sfoundryup
+
+Run the following command to install sfoundryup:
+
 curl -L \
--H "Accept: application/vnd.github.v3.raw" \
-"https://api.github.com/repos/SeismicSystems/seismic-foundry/contents/sfoundryup/install?ref=seismic" | bash
+     -H "Accept: application/vnd.github.v3.raw" \
+     "https://api.github.com/repos/SeismicSystems/seismic-foundry/contents/sfoundryup/install?ref=seismic" | bash
+
+Apply the changes to your terminal:
+
 source ~/.bashrc
-```
-✔ **Next Steps:**
-• Verify the installation by running `which sfoundryup`.
-• If the command shows a path, sfoundryup is installed.
-• If not, restart your terminal and run `source ~/.bashrc` again.
 
-➤ **4. Run sfoundryup**
-```sh
+✔ Now, sfoundryup is installed and ready to use.
+
+➤ 4. Run sfoundryup
+
+Execute the command:
+
 sfoundryup
-```
-⚡ **Note:** This may take some time.
-✔ **Next Steps:**
-• Wait for it to finish.
-• If it fails, check your internet connection and try again.
 
----
+⚡ This process may take some time to download all required dependencies.
 
-▶ **Deploy an Encrypted Contract**
+▶ Deploy an Encrypted Contract
 
-➤ **1. Clone & Navigate to the Repository**
-Run these commands:
-```sh
+➤ 1. Clone & Navigate to the Repository
+
+Clone the repository with:
+
 git clone --recurse-submodules https://github.com/SeismicSystems/try-devnet.git
+
+Navigate to the contract directory:
+
 cd try-devnet/packages/contract/
-```
-✔ **Next Steps:**
-• Check if the repository cloned by running `ls`.
-• If you see `contract/`, you are in the right place.
 
-➤ **2. Deploy the Contract**
-Run the script:
-```sh
+✔ You are now in the correct directory to deploy the contract.
+
+➤ 2. Deploy the Contract
+
+Run the deployment script:
+
 bash script/deploy.sh
-```
-✔ **Next Steps:**
-• The script will create a wallet.
-• It will show a **Faucet URL** and your **wallet address**.
-• Copy the **Faucet URL**, open it in a browser, and claim your funds.
-• After receiving the funds, your contract is deployed.
-• If there are errors, check the logs and make sure all dependencies are installed.
 
----
+✔ This script will:
+• Generate a wallet address
+• Provide a Faucet URL
+• Display the wallet address
 
-▶ **Interact with an Encrypted Contract**
+Next Steps:
 
-➤ **1. Navigate to Home Directory**
-```sh
+Copy the Faucet URL and open it in your browser.
+
+Fund your newly generated wallet using the Faucet.
+
+Once the transaction is complete, your contract deployment is successful.
+
+▶ Interact with an Encrypted Contract
+
+➤ 1. Navigate to Home Directory
+
+Move to the home directory to ensure a clean workspace:
+
 cd $HOME
-```
-✔ **Next Steps:**
-• Run `pwd` to confirm you are in the home directory.
 
-➤ **2. Install Bun**
-```sh
+✔ You are now back in the home directory.
+
+➤ 2. Install Bun
+
+Run the following command to install Bun:
+
 curl -fsSL https://bun.sh/install | bash
-```
-✔ **Next Steps:**
-• Restart your terminal.
-• Run `bun --version` to check if it was installed successfully.
 
-➤ **3. Install Node Dependencies**
-```sh
+✔ This will install Bun, a fast JavaScript runtime.
+
+➤ 3. Install Node Dependencies
+
+Navigate to the CLI package directory:
+
 cd try-devnet/packages/cli/
-bun install
-```
-✔ **Next Steps:**
-• Check if the dependencies installed correctly.
-• If there are issues, delete `node_modules` and run `bun install` again.
 
-➤ **4. Send Transactions**
-```sh
+Install the required dependencies:
+
+bun install
+
+✔ Now, all dependencies needed for interacting with the contract are installed.
+
+➤ 4. Send Transactions
+
+Execute the transaction script:
+
 bash script/transact.sh
-```
-✔ **Next Steps:**
-• Verify if the transaction was successful.
-• If there are errors, check your wallet balance and try again.
+
+✔ This will allow you to send transactions to the deployed contract.
+
 
 ---
 
