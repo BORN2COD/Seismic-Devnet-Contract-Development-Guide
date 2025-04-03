@@ -1,6 +1,7 @@
 # Seismic Devnet Contract Deployment Guide
 
 ▶ **Overview**
+
 This guide shows you how to deploy and work with an encrypted contract on Seismic Devnet. Follow each step closely for a smooth setup.
 
 Note; Seismic has already clarified that this testnet action is not incentivized.
