@@ -10,10 +10,15 @@ Note; Seismic has already clarified that this testnet action is not incentivized
 
 Network Name: Seismic Devnet
 Currency Symbol: ETH
+
 Chain ID: 5124
+
 RPC URL (HTTP): https://node-2.seismicdev.net/rpc
+
 RPC URL (WS): wss://node-2.seismicdev.net/ws
+
 Explorer: https://explorer-2.seismicdev.net
+
 Faucet: https://faucet-2.seismicdev.net
 
 ---
